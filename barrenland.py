@@ -31,6 +31,9 @@ class Land(object):
                 self.land[x][y] = 0
 
     def fill_barren_land(self,coordinates):
+        """
+        Fill the barren land with the coordinates in a list
+        """
         for coord in coordinates:
             self.create_barren_land(coord[0],coord[1])
 
