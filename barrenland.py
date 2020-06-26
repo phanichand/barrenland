@@ -76,12 +76,9 @@ def format_input(input_str):
     """
     input_str = ast.literal_eval(input_str)
     landcorners = []
+    y = lambda x: [(int(x[0]), int(x[1])), (int(x[2]), int(x[3]))]
     for point_str in input_str:
-        points = []
-        for x,y in pairwise(point_str.split()):
-            points.append((int(x),int(y)))        
-        landcorners.append(points)
-    print(landcorners)
+        landcorners.append(y(point_str.split()))
     return landcorners
 
 
